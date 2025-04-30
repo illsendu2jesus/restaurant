@@ -42,10 +42,12 @@ const data = {
 }
 
 let food = document.createElement('div');
+food.classList.add('food');
 
 for(let category in data){
     //data[fd] =>  we access the array containign the 3 food
     let section = document.createElement('div');
+    section.classList.add('food_section');
 
     let title = document.createElement('h1');
     title.textContent = category;
@@ -55,12 +57,15 @@ for(let category in data){
     see_more.textContent = 'Order More';
 
     let items = document.createElement('div'); // for all foods of section
+    items.classList.add('food_list');
+    
     for(let fd of data[category]) // now each array is acessible ie {image,}
     {
 
-        console.log(fd.title);
+       // console.log(fd.title);
 
         let item = document.createElement('div');
+        item.classList.add('food_card');
 
         let pic = document.createElement('img');
         pic.src = fd['image']; 

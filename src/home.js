@@ -14,4 +14,6 @@ bx.appendChild(t1);
 bx.appendChild(t2);
 bx.appendChild(t3);
 
+bx.classList.add('home_titles');
+
 export {bx};
